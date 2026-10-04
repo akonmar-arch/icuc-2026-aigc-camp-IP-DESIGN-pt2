@@ -1,0 +1,126 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><style>@font-face{font-family:Cumi;src:url(../assets/cumi-round.ttf)}*{box-sizing:border-box;font-family:Cumi,sans-serif!important;font-weight:700!important;font-synthesis:none}html{background:#fffaf2;color:#34212c}body{margin:0;padding:40px;font-size:18px;line-height:1.8}h1{font-size:30px;margin:0 0 35px}:root{--foreground:#34212c;--background:#fffaf2;--primary:#6d3b51;--primary-foreground:#fffaf2;--muted-foreground:#77656c;--border:#d9c8c8;--card:#fffaf2;--viz-series-1:#e78c72}.primary{color:#6d3b51}p{margin:30px 0 0}</style><style>:root{--foreground:#34212c;--background:#fffaf2;--primary:#6d3b51;--primary-foreground:#fffaf2;--muted-foreground:#77656c;--border:#d9c8c8;--card:#fffaf2}body{padding:40px;max-width:1400px;margin:auto}h1{font-size:30px;margin:0 0 25px}</style><h1>2026.07.31 · 太阳头部方案</h1><style>
+  #sun-head-options {
+    --coral: light-dark(#f66c79, #ff8794);
+    --coral-deep: light-dark(#d94f63, #dc5268);
+    --coral-hi: light-dark(#ffd9cc, #ffd5cf);
+    --coral-soft: light-dark(#ff9aa1, #ff9ca5);
+    --eye: light-dark(#3a2429, #2c1b22);
+    --eye-hi: light-dark(#fff5ed, #fff7f2);
+    --cheek: light-dark(#ed7580, #f58a94);
+    --label: var(--foreground);
+    --subtle: var(--muted-foreground);
+    --shadow: light-dark(rgba(104, 53, 50, .24), rgba(0, 0, 0, .38));
+  }
+  #sun-head-options .sun-option {
+    display: grid;
+    justify-items: center;
+    gap: 6px;
+    padding: 12px 6px 4px;
+  }
+  #sun-head-options .sun-svg {
+    width: min(100%, 360px);
+    height: auto;
+    overflow: visible;
+  }
+  #sun-head-options .toy-shadow {
+    filter: drop-shadow(0 14px 12px var(--shadow));
+  }
+  #sun-head-options .option-name {
+    margin: 0;
+    color: var(--label);
+    font-weight: 500;
+  }
+  #sun-head-options .option-note {
+    margin: 0;
+    color: var(--subtle);
+  }
+</style>
+
+<div id="sun-head-options" aria-label="两种太阳头部轮廓对比">
+  <div class="viz-grid">
+    <section class="card sun-option" aria-label="十二枚短圆角光芒的经典日轮头部">
+      <svg class="sun-svg" viewBox="0 0 400 400" role="img" aria-labelledby="classic-title classic-desc">
+        <title id="classic-title">短圆角光芒的经典日轮</title>
+        <desc id="classic-desc">一个十二枚短小圆角光芒构成的珊瑚粉太阳头部，五官直接绘制在表面。</desc>
+        <defs>
+          <radialGradient id="classic-fill" cx="31%" cy="24%" r="80%">
+            <stop offset="0%" stop-color="var(--coral-hi)" />
+            <stop offset="39%" stop-color="var(--coral-soft)" />
+            <stop offset="100%" stop-color="var(--coral-deep)" />
+          </radialGradient>
+          <linearGradient id="classic-ray" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="var(--coral-hi)" />
+            <stop offset="100%" stop-color="var(--coral)" />
+          </linearGradient>
+        </defs>
+        <g class="toy-shadow">
+          <g fill="url(#classic-ray)">
+            <rect x="181" y="22" width="38" height="102" rx="19" />
+            <rect x="181" y="276" width="38" height="102" rx="19" />
+            <rect x="276" y="181" width="102" height="38" rx="19" />
+            <rect x="22" y="181" width="102" height="38" rx="19" />
+            <rect x="178" y="20" width="44" height="106" rx="22" transform="rotate(30 200 200)" />
+            <rect x="178" y="274" width="44" height="106" rx="22" transform="rotate(30 200 200)" />
+            <rect x="178" y="20" width="44" height="106" rx="22" transform="rotate(60 200 200)" />
+            <rect x="178" y="274" width="44" height="106" rx="22" transform="rotate(60 200 200)" />
+            <rect x="178" y="20" width="44" height="106" rx="22" transform="rotate(120 200 200)" />
+            <rect x="178" y="274" width="44" height="106" rx="22" transform="rotate(120 200 200)" />
+            <rect x="178" y="20" width="44" height="106" rx="22" transform="rotate(150 200 200)" />
+            <rect x="178" y="274" width="44" height="106" rx="22" transform="rotate(150 200 200)" />
+          </g>
+          <circle cx="200" cy="200" r="127" fill="url(#classic-fill)" />
+          <ellipse cx="158" cy="138" rx="39" ry="24" fill="var(--coral-hi)" opacity=".34" transform="rotate(-25 158 138)" />
+          <ellipse cx="154" cy="207" rx="18" ry="31" fill="var(--eye)" />
+          <ellipse cx="246" cy="207" rx="18" ry="31" fill="var(--eye)" />
+          <ellipse cx="149" cy="195" rx="5" ry="9" fill="var(--eye-hi)" opacity=".9" />
+          <ellipse cx="241" cy="195" rx="5" ry="9" fill="var(--eye-hi)" opacity=".9" />
+          <path d="M180 258 C192 271 208 271 220 258" fill="none" stroke="var(--eye)" stroke-width="8" stroke-linecap="round" />
+          <ellipse cx="112" cy="252" rx="20" ry="9" fill="var(--cheek)" opacity=".42" />
+          <ellipse cx="288" cy="252" rx="20" ry="9" fill="var(--cheek)" opacity=".42" />
+        </g>
+      </svg>
+      <p class="option-name">① 经典日轮</p>
+      <p class="option-note text-small">12 枚短圆角光芒</p>
+    </section>
+
+    <section class="card sun-option" aria-label="八枚大圆角光芒的潮玩日轮头部">
+      <svg class="sun-svg" viewBox="0 0 400 400" role="img" aria-labelledby="puffy-title puffy-desc">
+        <title id="puffy-title">大圆角光芒的潮玩日轮</title>
+        <desc id="puffy-desc">一个八枚宽大圆润光芒构成的珊瑚粉太阳头部，五官直接绘制在表面。</desc>
+        <defs>
+          <radialGradient id="puffy-fill" cx="30%" cy="22%" r="84%">
+            <stop offset="0%" stop-color="var(--coral-hi)" />
+            <stop offset="44%" stop-color="var(--coral-soft)" />
+            <stop offset="100%" stop-color="var(--coral-deep)" />
+          </radialGradient>
+        </defs>
+        <g class="toy-shadow">
+          <path d="M200 39
+            C242 39 247 87 261 109
+            C290 91 331 107 349 138
+            C367 169 343 198 327 212
+            C363 229 367 270 344 301
+            C322 331 282 320 266 322
+            C267 361 235 383 200 383
+            C165 383 133 361 134 322
+            C118 320 78 331 56 301
+            C33 270 37 229 73 212
+            C57 198 33 169 51 138
+            C69 107 110 91 139 109
+            C153 87 158 39 200 39 Z" fill="url(#puffy-fill)" />
+          <ellipse cx="158" cy="132" rx="41" ry="25" fill="var(--coral-hi)" opacity=".34" transform="rotate(-25 158 132)" />
+          <ellipse cx="154" cy="204" rx="18" ry="31" fill="var(--eye)" />
+          <ellipse cx="246" cy="204" rx="18" ry="31" fill="var(--eye)" />
+          <ellipse cx="149" cy="192" rx="5" ry="9" fill="var(--eye-hi)" opacity=".9" />
+          <ellipse cx="241" cy="192" rx="5" ry="9" fill="var(--eye-hi)" opacity=".9" />
+          <path d="M180 255 C192 268 208 268 220 255" fill="none" stroke="var(--eye)" stroke-width="8" stroke-linecap="round" />
+          <ellipse cx="111" cy="249" rx="20" ry="9" fill="var(--cheek)" opacity=".42" />
+          <ellipse cx="289" cy="249" rx="20" ry="9" fill="var(--cheek)" opacity=".42" />
+        </g>
+      </svg>
+      <p class="option-name">② 潮玩日轮</p>
+      <p class="option-note text-small">8 枚大圆角光芒</p>
+    </section>
+  </div>
+</div>
+<p>7月31日保留的原始图形方案 · 本次加阅读版式与字体</p></html>

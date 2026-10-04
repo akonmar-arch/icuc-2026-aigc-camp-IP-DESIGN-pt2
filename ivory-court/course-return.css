@@ -1,0 +1,5 @@
+.course-return{position:fixed;left:24px;bottom:24px;z-index:60;display:inline-flex;align-items:center;min-height:44px;padding:9px 18px;background:var(--paper,#fffaf2);color:var(--wine,#6d3b51);border:1px solid var(--wine,#6d3b51);border-radius:3px;text-decoration:none;font-size:14px;box-shadow:0 5px 20px #34212c15}
+.course-return:hover{background:var(--wine,#6d3b51);color:var(--paper,#fffaf2)}
+#character-design{scroll-margin-top:0}
+@media(max-width:720px){.course-return{left:12px;bottom:12px;padding:9px 14px}}
+@media print{.course-return{display:none}}

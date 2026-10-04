@@ -1,0 +1,21 @@
+/* The original 50 PPT pages, edge to edge in their original order. */
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#000;scroll-padding:0}
+main{display:block;width:100%;margin:0;padding:0}
+.slide{position:relative;display:block;width:100%;margin:0;padding:0;border:0;line-height:0}
+.slide>img{display:block;width:100%;height:auto;margin:0;padding:0;border:0}
+.slide>video{position:absolute;display:block;margin:0;padding:0;border:0;background:#000;object-fit:fill}
+@font-face{font-family:CumiCase;src:url('case-study/assets/cumi-round.ttf') format('truetype');font-weight:700;font-display:swap}
+.case-entry{display:grid;grid-template-columns:1.05fr 1fr;align-items:center;width:100%;aspect-ratio:16/9;margin:0;padding:5.5vw 7vw;background:linear-gradient(112deg,#344ca5,#663baf);font-family:CumiCase,"Microsoft YaHei",sans-serif;color:#fff5df;line-height:1.65;overflow:hidden}
+.case-entry-copy{position:relative;z-index:1}.case-entry-kicker{font-size:clamp(12px,1.35vw,20px);margin:0 0 1.3vw;color:#e9dfef}.case-entry h2{font-size:clamp(28px,6vw,96px);line-height:1.2;font-weight:700;letter-spacing:.015em;color:#f5ec71;margin:0 0 1.8vw}.case-entry-description{font-size:clamp(14px,1.55vw,24px);line-height:1.85;margin:0 0 2.5vw;color:#efedf6}.case-entry-link{display:inline-flex;align-items:center;gap:2vw;min-height:44px;padding:1vw 1.6vw;background:#f5ec71;color:#323b89;text-decoration:none;font-size:clamp(14px,1.6vw,24px);line-height:1.5}.case-entry-link:hover{background:#fffaa4}.case-entry-link:focus-visible{outline:3px solid #fff;outline-offset:4px}.case-entry-link span{font-size:1.25em}.case-entry-art{display:flex;align-items:center;justify-content:center;width:100%;height:100%;min-width:0;margin:0}.case-entry-art img{display:block;width:100%;height:100%;max-height:43vw;object-fit:contain;filter:drop-shadow(0 1.4vw 1.5vw #24164240)}
+@media(max-width:600px){.case-entry{padding:4.5vw 5vw;grid-template-columns:1.2fr 1fr}.case-entry-kicker{font-size:10px;margin-bottom:7px}.case-entry h2{font-size:7vw;margin-bottom:10px}.case-entry-description{font-size:11px;margin-bottom:12px;line-height:1.75}.case-entry-link{font-size:12px;padding:8px 11px;gap:10px}.case-entry-art img{max-height:47vw}}
+.royal-entry{background:#eee7e0;color:#5c4653}.royal-entry .case-entry-kicker{color:#806573}.royal-entry h2{color:#695460}.royal-entry .case-entry-description{color:#73606a}.royal-entry .case-entry-link{background:#695460;color:#fffaf2}.royal-entry .case-entry-link:hover{background:#513d4a}.royal-entry .case-entry-link:focus-visible{outline-color:#695460}.royal-entry-art{display:grid;grid-template-columns:1fr 1fr;gap:1vw;align-items:center}.royal-entry-art img{width:100%;height:auto;max-height:none;object-fit:contain;filter:none}
+/* CUMI product manual palette; scoped to the CUMI entrance. */
+#case-study-entry{--cumi-wine:#6d3b51;--cumi-cream:#f4dcb5;--cumi-paper:#fff8e9;--cumi-coral:#f08f71;background:var(--cumi-wine);color:var(--cumi-paper)}
+#case-study-entry .case-entry-kicker{color:var(--cumi-coral)}
+#case-study-entry h2{color:var(--cumi-cream)}
+#case-study-entry .case-entry-description{color:var(--cumi-paper)}
+#case-study-entry .case-entry-link{background:var(--cumi-cream);color:var(--cumi-wine)}
+#case-study-entry .case-entry-link:hover{background:var(--cumi-coral);color:#3f2932}
+#case-study-entry .case-entry-link:focus-visible{outline-color:var(--cumi-paper)}
+@media print{.slide{break-inside:avoid}.slide>video{display:none}}
